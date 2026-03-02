@@ -25,7 +25,7 @@ cams = pygame.camera.list_cameras()
 print('Available cameras:', cams)
 
 if cams:
-    cam = pygame.camera.Camera(cams[0], (1920, 1080))  
+    cam = pygame.camera.Camera(cams[0], (4000, 3000))  
     cam.start()
 else:
     print("No camera found.")
@@ -68,4 +68,4 @@ bevel_turn(100, 'forward')
 
 cam.stop()
 print("Scanning complete. Total pictures taken:", pic_count)
-os.system('chromium http://localhost:5000/meta/')
+os.system('chromium http://localhost:1234/')
