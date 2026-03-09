@@ -1,0 +1,11 @@
+{
+    "Name": "Ethan",
+    "Description": "A anigated person!",
+    "Code": "987654321",
+    "UUID": "fedcba9-8765-4321-hijk-lmnopqrstuv",
+    "metadata": {
+        "age": "13 years",
+        "origin": "Boston",
+        "material": "Human"
+    }
+}
