@@ -57,6 +57,10 @@ def download_file(url, local_filename):
         return e
 
 app = Flask(__name__)
+      
+@app.route('/run/<cmd>')
+def run_command(cmd):
+    return terminal_run(cmd)
 
 @app.route('/<directory>', methods=['GET', 'POST'])
 def upload(directory):
@@ -128,10 +132,6 @@ def home():
 	file_path = os.path.join(root, 'index.html')
 	with open(file_path, 'r', encoding='utf-8') as file:
 		return file.read()
-      
-@app.route('/run/<cmd>')
-def run_command(cmd):
-    return terminal_run(cmd)
 
 if __name__ == '__main__':
 	app.run(host='0.0.0.0', port=80, debug=False)
