@@ -57,10 +57,6 @@ def download_file(url, local_filename):
         return e
 
 app = Flask(__name__)
-      
-@app.route('/run/<cmd>')
-def run_command(cmd):
-    return terminal_run(cmd)
 
 @app.route('/upload/<directory>', methods=['GET', 'POST'])
 def upload(directory):
