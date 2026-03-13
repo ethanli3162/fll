@@ -49,7 +49,7 @@ def upload():
         except Exception as e:
             return f'An error occurred: {e}'
     
-    return render_template('upload.html')
+    return 'Upload to this API in type: multipart/form-data'
     
 @app.route('/<file>')
 def index(file):
@@ -63,14 +63,19 @@ def index(file):
 			print(f"Error: {e}")
 			return send_from_directory('', file, as_attachment=False)
 	else:
-		if file == 'fll.html':
-			root = os.path.dirname(__file__)
-			file_path = os.path.join(root, 'fll', 'index.html')
-			with open(file_path, 'r', encoding='utf-8') as file:
-				return file.read()
-		else:
-			return send_from_directory('', file, as_attachment=False)
-
+		return send_from_directory('', file, as_attachment=False)
+      
+@app.route('/<file1>/<file2>')
+def index2(file1, file2):
+	try:
+		root = os.path.dirname(__file__)
+		file_path = os.path.join(root, file1, file2)
+		with open(file_path, 'r', encoding='utf-8') as file:
+			return file.read()
+	except Exception as e:
+		print(f"Error: {e}")
+		return send_from_directory(file1, file2, as_attachment=False)
+      
 @app.route('/')
 def home():
 	root = os.path.dirname(__file__)
