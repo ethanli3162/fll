@@ -7,6 +7,17 @@ import json
 import subprocess
 from pathlib import Path
 
+def terminal_run(cmd, timeout=None, shell=False):
+    result = subprocess.run(
+        cmd,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        timeout=timeout,
+        shell=shell,
+        text=True,
+    )
+    return result.returncode, result.stdout, result.stderr
+
 def send_file(url, file_path, field_name='file', extra_data=None):
     file_path = Path(file_path)
     if not file_path.is_file():
@@ -120,4 +131,4 @@ def home():
 
 
 if __name__ == '__main__':
-	app.run(host='0.0.0.0', port=80, debug=True)
+	app.run(host='0.0.0.0', port=80, debug=False)
