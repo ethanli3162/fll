@@ -37,9 +37,9 @@ def take_picture():
     pygame.image.save(image, "images/captured_img" + str(pic_count) + ".jpg")          
     print("Picture taken and saved at images/captured_img" + str(pic_count) + ".jpg'.")
 
-picture_count_per_rotation = 1
+picture_count_per_rotation = 30
 
-wait = 0
+wait = 1
 
 pic_count = 0
 
@@ -56,6 +56,21 @@ def bevel_turn(degrees, direction):
      Motor1_Turn(degrees, direction)
      time.sleep(wait)
      Motor1.Stop()
+
+os.system(r"figlet 'Ancient Vision'")
+
+print('The future of archeological databases and scanning software')
+
+
+print(
+f'''
+Scanner Settings:
+Pictures per rotation: {picture_count_per_rotation}
+Wait time between pictures: {wait} seconds
+Total pictures to take: {picture_count_per_rotation * 4}
+'''
+)
+
 
 ring_turn(100, 'forward')
 ring_turn(200, 'backward')
