@@ -12,13 +12,13 @@ rm -f -- stop.py >/dev/null 2>&1
 rm -f -- service.sh >/dev/null 2>&1
 rm -f -- requierments.txt >/dev/null 2>&1
 rm -f -- index.html >/dev/null 2>&1
-wget https://artifact-alliance.vercel.app/install/vision.py -nv -q
-wget https://artifact-alliance.vercel.app/install/DRV8825.py -nv -q
-wget https://artifact-alliance.vercel.app/install/service.py -nv -q
-wget https://artifact-alliance.vercel.app/install/stop.py -nv -q
-wget https://artifact-alliance.vercel.app/install/service.sh -nv -q
-wget https://artifact-alliance.vercel.app/install/requierments.txt -nv -q
-wget https://artifact-alliance.vercel.app/install/index.html -nv -q
+wget https://raw.githubusercontent.com/eli3162/fll/refs/heads/main/install/vision.py -nv -q
+wget https://raw.githubusercontent.com/eli3162/fll/refs/heads/main/install/DRV8825.py -nv -q
+wget https://raw.githubusercontent.com/eli3162/fll/refs/heads/main/install/service.py -nv -q
+wget https://raw.githubusercontent.com/eli3162/fll/refs/heads/main/install/stop.py -nv -q
+wget https://raw.githubusercontent.com/eli3162/fll/refs/heads/main/install/service.sh -nv -q
+wget https://raw.githubusercontent.com/eli3162/fll/refs/heads/main/install/requierments.txt -nv -q
+wget https://raw.githubusercontent.com/eli3162/fll/refs/heads/main/install/index.html -nv -q
 chmod +x service.sh
 rm images -r >/dev/null 2>&1
 mkdir images && cd images
@@ -26,9 +26,9 @@ rm -f -- click.mp3 >/dev/null 2>&1
 rm -f -- button.png >/dev/null 2>&1
 rm -f -- GUI.png >/dev/null 2>&1
 rm -f -- title.png >/dev/null 2>&1
-wget https://artifact-alliance.vercel.app/install/click.mp3 -nv -q
-wget https://artifact-alliance.vercel.app/install/button.png -nv -q
-wget https://artifact-alliance.vercel.app/install/GUI.png -nv -q
+wget https://raw.githubusercontent.com/eli3162/fll/refs/heads/main/install/click.mp3 -nv -q
+wget https://raw.githubusercontent.com/eli3162/fll/refs/heads/main/install/button.png -nv -q
+wget https://raw.githubusercontent.com/eli3162/fll/refs/heads/main/install/GUI.png -nv -q
 cd
 pip install -r requierments.txt --break-system-packages --disable-pip-version-check -qq
 rm linux-wifi-hotspot -r >/dev/null 2>&1
