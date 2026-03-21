@@ -138,16 +138,16 @@
                   </div>
                 </model-viewer>
                 <script>
-                  async function exportGLB() {
-                    const modelViewer = document.getElementById("static-model");
-                    const glTF = await modelViewer.exportScene();
-                    const file = new File([glTF], "model.glb");
-                    const link = document.createElement("a");
-                    link.download = file.name;
-                    link.href = URL.createObjectURL(file);
-                    link.click();
-                  }
-            </script>
+                    async function exportGLB() {
+                        const modelViewer = document.getElementById("static-model");
+                        const glTF = await modelViewer.exportScene();
+                        const file = new File([glTF], "model.glb");
+                        const link = document.createElement("a");
+                        link.download = file.name;
+                        link.href = URL.createObjectURL(file);
+                        link.click();
+                    }
+                </script>
         </div>
         <div class="right" id="metadata">
             <div style="margin-bottom: 15px;">
