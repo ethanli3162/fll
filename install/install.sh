@@ -40,7 +40,7 @@ pip install -r requierments.txt --break-system-packages --disable-pip-version-ch
 echo 'Installing linux-wifi-hotspot'
 rm linux-wifi-hotspot -r >/dev/null 2>&1
 echo 'Cloning Repository'
-git clone --quiet https://github.com/lakinduakash/linux-wifi-hotspot
+git clone --quiet https://github.com/lakinduakash/linux-wifi-hotspot.git
 cd linux-wifi-hotspot
 echo 'Building App'
 make --silent
