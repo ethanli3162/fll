@@ -6,8 +6,6 @@ from pathlib import Path
 from logging.handlers import RotatingFileHandler
 from collections import deque
 
-scanner_ip = '71.230.251.141'
-
 def parse(data):
     marker = "#path.fll-DATA"
 
@@ -157,5 +155,9 @@ def data(filename):
 def installer_file(filename):
 	return send_from_directory('install', filename, as_attachment=True)
 
+@app.route('/icons/<folder>/<filename>')
+def serve_icon(folder, filename):
+	return send_from_directory(os.path.join('icons', folder), filename)
+
 if __name__ == '__main__':
-	app.run(host='0.0.0.0', port=80, debug=True)
+	app.run(host='0.0.0.0', port=80, debug=True) 
