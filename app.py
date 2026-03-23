@@ -159,5 +159,11 @@ def installer_file(filename):
 def serve_icon(folder, filename):
 	return send_from_directory(os.path.join('icons', folder), filename)
 
+@app.errorhandler(404)
+def page_not_found(e):
+	with open('404.html', 'r') as file:
+		content = file.read()
+	return content
+
 if __name__ == '__main__':
 	app.run(host='0.0.0.0', port=80, debug=True) 
