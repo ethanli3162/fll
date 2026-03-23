@@ -9,3 +9,6 @@ Installation for Scanner:
 
 Run website:
 ```git clone https://github.com/eli3162/fll.git && python fll/app.py```
+
+
+[Credits:](/humans.md)
