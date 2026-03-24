@@ -2,6 +2,7 @@
   "dependencies": {
     "@craco/craco": "^7.1.0",
     "@tailwindcss/cli": "^4.2.2",
+    "md-block": "^0.0.1",
     "tailwindcss": "^4.2.2"
   },
   "name": "ancient-vision",
