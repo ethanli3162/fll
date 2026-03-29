@@ -1,5 +1,5 @@
 import time, math
-from DRV8825 import DRV8825
+from gpiolibrary import *
 import pygame.camera
 import os
 from powermonitor import *
