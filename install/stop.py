@@ -1,5 +1,5 @@
 import time, math
-from DRV8825 import DRV8825
+from gpiolibrary import DRV8825
 import os
 
 Motor1 = DRV8825(dir_pin=13, step_pin=19, enable_pin=12, mode_pins=(16, 17, 20))
