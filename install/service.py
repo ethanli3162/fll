@@ -31,6 +31,7 @@ def stopplease():
         file_path = os.path.join(root, 'index.html')
         with open(file_path, 'r', encoding='utf-8') as file:
                 return file.read()
+        
 @app.route('/meta/')
 def metadata():
         root = os.path.dirname(__file__)
