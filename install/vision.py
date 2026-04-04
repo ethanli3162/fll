@@ -36,8 +36,8 @@ def take_picture():
     global pic_count
     pic_count = pic_count + 1
     image = cam.get_image()
-    pygame.image.save(image, "images/captured_img" + str(pic_count) + ".jpg")          
-    #print("Picture taken and saved at images/captured_img" + str(pic_count) + ".jpg'.")
+    pygame.image.save(image, "images/captured_img" + str(pic_count) + ".png")          
+    #print("Picture taken and saved at images/captured_img" + str(pic_count) + ".png'.")
 
 picture_count_per_rotation = 30
 
