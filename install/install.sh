@@ -24,14 +24,14 @@ rm -f -- requierments.txt >> install.log 2>&1
 rm -f -- index.html >> install.log 2>&1
 echo 'All old install files removed, pulling new ones'
 echo 'All old install files removed, pulling new ones' >> install.log 2>&1
-wget https://artifactalliance.org/install/vision.py -4 >> install.log 2>&1
-wget https://artifactalliance.org/install/powermonitor.py -4 >> install.log 2>&1
-wget https://artifactalliance.org/install/gpiolibrary.py -4 >> install.log 2>&1
-wget https://artifactalliance.org/install/service.py -4 >> install.log 2>&1
-wget https://artifactalliance.org/install/stop.py -4 >> install.log 2>&1
-wget https://artifactalliance.org/install/service.sh -4 >> install.log 2>&1
-wget https://artifactalliance.org/install/requierments.txt -4 >> install.log 2>&1
-wget https://artifactalliance.org/install/index.html -4 >> install.log 2>&1
+wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/vision.py -4 >> install.log 2>&1
+wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/powermonitor.py -4 >> install.log 2>&1
+wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/gpiolibrary.py -4 >> install.log 2>&1
+wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/service.py -4 >> install.log 2>&1
+wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/stop.py -4 >> install.log 2>&1
+wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/service.sh -4 >> install.log 2>&1
+wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/requierments.txt -4 >> install.log 2>&1
+wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/index.html -4 >> install.log 2>&1
 echo 'Main Files pulled; setting service.sh as executable' >> install.log 2>&1
 echo 'Main Files pulled; setting service.sh as executable'
 chmod +x service.sh
@@ -45,12 +45,12 @@ rm -f -- tailwind.js >> install.log 2>&1
 rm -f -- stop.png >> install.log 2>&1
 echo 'Downloading HTML5 Assets'
 echo 'Downloading HTML5 Assets' >> install.log 2>&1
-wget https://artifactalliance.org/install/click.mp3 -4 >> install.log 2>&1
-wget https://artifactalliance.org/install/button.png -4 >> install.log 2>&1
-wget https://artifactalliance.org/install/GUI.png -4 >> install.log 2>&1
-wget https://artifactalliance.org/install/title.png -4 >> install.log 2>&1
-wget https://artifactalliance.org/install/tailwind.js -4 >> install.log 2>&1
-wget https://artifactalliance.org/install/stop.png -4 >> install.log 2>&1
+wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/click.mp3 -4 >> install.log 2>&1
+wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/button.png -4 >> install.log 2>&1
+wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/GUI.png -4 >> install.log 2>&1
+wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/title.png -4 >> install.log 2>&1
+wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/tailwind.js -4 >> install.log 2>&1
+wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/stop.png -4 >> install.log 2>&1
 cd
 echo 'Installing requiered python packages'
 echo 'Installing requiered python packages' >> install.log 2>&1
