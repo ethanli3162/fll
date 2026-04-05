@@ -24,7 +24,7 @@ def scan():
         
 
 @app.route('/scan/<wait>/<piccount>/')
-def scan(wait, piccount):
+def scanwithargs(wait, piccount):
         os.system(f'python vision.py -w {wait} -c {piccount}')
         root = os.path.dirname(__file__)
         file_path = os.path.join(root, 'index.html')
