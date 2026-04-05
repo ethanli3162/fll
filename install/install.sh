@@ -23,14 +23,14 @@ rm -f -- requierments.txt > /dev/null
 rm -f -- index.html > /dev/null
 echo 'All old install files removed, pulling new ones'
 echo 'All old install files removed, pulling new ones' > /dev/null
-wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/vision.py -4 > /dev/null
-wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/powermonitor.py -4 > /dev/null
-wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/gpiolibrary.py -4 > /dev/null
-wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/service.py -4 > /dev/null
-wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/stop.py -4 > /dev/null
-wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/service.sh -4 > /dev/null
-wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/requierments.txt -4 > /dev/null
-wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/index.html -4 > /dev/null
+wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/vision.py > /dev/null
+wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/powermonitor.py > /dev/null
+wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/gpiolibrary.py > /dev/null
+wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/service.py > /dev/null
+wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/stop.py > /dev/null
+wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/service.sh > /dev/null
+wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/requierments.txt > /dev/null
+wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/index.html > /dev/null
 echo 'Main Files pulled; setting service.sh as executable' > /dev/null
 echo 'Main Files pulled; setting service.sh as executable'
 chmod +x service.sh
@@ -44,12 +44,12 @@ rm -f -- tailwind.js > /dev/null
 rm -f -- stop.png > /dev/null
 echo 'Downloading HTML5 Assets'
 echo 'Downloading HTML5 Assets' > /dev/null
-wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/click.mp3 -4 > /dev/null
-wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/button.png -4 > /dev/null
-wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/GUI.png -4 > /dev/null
-wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/title.png -4 > /dev/null
-wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/tailwind.js -4 > /dev/null
-wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/stop.png -4 > /dev/null
+wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/click.mp3 > /dev/null
+wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/button.png > /dev/null
+wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/GUI.png > /dev/null
+wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/title.png > /dev/null
+wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/tailwind.js > /dev/null
+wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/stop.png > /dev/null
 cd
 echo 'Installing requiered python packages'
 echo 'Installing requiered python packages' > /dev/null
