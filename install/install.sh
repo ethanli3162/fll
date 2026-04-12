@@ -1,6 +1,5 @@
 #!/bin/bash
-echo 'install logs:' > install.log 2>&1
-sudo apt install  -qq -y figlet >> install.log 2>&1
+sudo apt install  -qq -y figlet 
 figlet "Ancient Vision"
 echo "The future of archeological databases and scanning software"
 echo "By Ethan Li"
@@ -8,58 +7,62 @@ echo "MIT License"
 cd
 echo 'Installation Logs:'
 echo 'Checking for and removing old install files'
-figlet "Ancient Vision" >> install.log 2>&1
-echo "The future of archeological databases and scanning software" >> install.log 2>&1
-echo "By Ethan Li" >> install.log 2>&1
-echo "MIT License" >> install.log 2>&1
-echo 'Installation Logs:' >> install.log 2>&1
-echo 'Checking for and removing old install files' >> install.log 2>&1
-rm -f -- vision.py >> install.log 2>&1
-rm -f -- powermonitor.py >> install.log 2>&1
-rm -f -- gpiolibrary.py >> install.log 2>&1
-rm -f -- service.py >> install.log 2>&1
-rm -f -- stop.py >> install.log 2>&1
-rm -f -- service.sh >> install.log 2>&1
-rm -f -- requierments.txt >> install.log 2>&1
-rm -f -- index.html >> install.log 2>&1
+figlet "Ancient Vision" 
+echo "The future of archeological databases and scanning software" 
+echo "By Ethan Li" 
+echo "MIT License" 
+echo 'Installation Logs:' 
+echo 'Checking for and removing old install files' 
+rm -f -- vision.py 
+rm -f -- powermonitor.py 
+rm -f -- gpiolibrary.py 
+rm -f -- service.py 
+rm -f -- stop.py 
+rm -f -- service.sh 
+rm -f -- requierments.txt 
+rm -f -- index.html 
 echo 'All old install files removed, pulling new ones'
-echo 'All old install files removed, pulling new ones' >> install.log 2>&1
-wget https://artifactalliance.org/install/vision.py -4 >> install.log 2>&1
-wget https://artifactalliance.org/install/powermonitor.py -4 >> install.log 2>&1
-wget https://artifactalliance.org/install/gpiolibrary.py -4 >> install.log 2>&1
-wget https://artifactalliance.org/install/service.py -4 >> install.log 2>&1
-wget https://artifactalliance.org/install/stop.py -4 >> install.log 2>&1
-wget https://artifactalliance.org/install/service.sh -4 >> install.log 2>&1
-wget https://artifactalliance.org/install/requierments.txt -4 >> install.log 2>&1
-wget https://artifactalliance.org/install/index.html -4 >> install.log 2>&1
-echo 'Main Files pulled; setting service.sh as executable' >> install.log 2>&1
+echo 'All old install files removed, pulling new ones' 
+wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/vision.py 
+wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/powermonitor.py 
+wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/gpiolibrary.py 
+wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/service.py 
+wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/stop.py 
+wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/service.sh 
+wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/requierments.txt 
+wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/index.html 
+echo 'Main Files pulled; setting service.sh as executable' 
 echo 'Main Files pulled; setting service.sh as executable'
 chmod +x service.sh
-rm images -r >> install.log 2>&1
+rm images -r 
 mkdir images && cd images
-rm -f -- click.mp3 >> install.log 2>&1
-rm -f -- button.png >> install.log 2>&1
-rm -f -- GUI.png >> install.log 2>&1
-rm -f -- title.png >> install.log 2>&1
+rm -f -- click.mp3 
+rm -f -- button.png 
+rm -f -- GUI.png 
+rm -f -- title.png 
+rm -f -- tailwind.js 
+rm -f -- stop.png 
 echo 'Downloading HTML5 Assets'
-echo 'Downloading HTML5 Assets' >> install.log 2>&1
-wget https://artifactalliance.org/install/click.mp3 -4 >> install.log 2>&1
-wget https://artifactalliance.org/install/button.png -4 >> install.log 2>&1
-wget https://artifactalliance.org/install/GUI.png -4 >> install.log 2>&1
-wget https://artifactalliance.org/install/title.png -4 >> install.log 2>&1
+echo 'Downloading HTML5 Assets' 
+wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/click.mp3 
+wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/button.png 
+wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/GUI.png 
+wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/title.png 
+wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/tailwind.js 
+wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/stop.png 
 cd
 echo 'Installing requiered python packages'
-echo 'Installing requiered python packages' >> install.log 2>&1
-pip install -r requierments.txt --break-system-packages --disable-pip-version-check >> install.log 2>&1
+echo 'Installing requiered python packages' 
+pip install -r requierments.txt --break-system-packages --disable-pip-version-check 
 echo 'Installing linux-wifi-hotspot' 
-rm linux-wifi-hotspot -r >> install.log 2>&1
+rm linux-wifi-hotspot -r 
 echo 'Cloning Repository'
-git clone https://github.com/lakinduakash/linux-wifi-hotspot.git >> install.log 2>&1
+git clone https://github.com/lakinduakash/linux-wifi-hotspot.git 
 cd linux-wifi-hotspot
 echo 'Building App'
-make >> install.log 2>&1
-sudo make install >> install.log 2>&1
-systemctl enable create_ap >> install.log 2>&1
+make 
+sudo make install 
+systemctl enable create_ap 
 cd
 echo "Installation complete! You can find the logs at install.log"
 echo "The dashboard is hosted at http://localhost:1234"
