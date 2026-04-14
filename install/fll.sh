@@ -5,12 +5,6 @@ echo "The future of archeological databases and scanning software"
 echo "By Ethan Li"
 echo "MIT License"
 cd
-echo 'Installation Logs:'
-echo 'Checking for and removing old install files'
-figlet "Ancient Vision" 
-echo "The future of archeological databases and scanning software" 
-echo "By Ethan Li" 
-echo "MIT License" 
 echo 'Installation Logs:' 
 echo 'Checking for and removing old install files' 
 rm -f -- vision.py 
@@ -22,7 +16,6 @@ rm -f -- service.sh
 rm -f -- requierments.txt 
 rm -f -- index.html 
 echo 'All old install files removed, pulling new ones'
-echo 'All old install files removed, pulling new ones' 
 wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/vision.py 
 wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/powermonitor.py 
 wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/gpiolibrary.py 
@@ -32,7 +25,6 @@ wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/serv
 wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/requierments.txt 
 wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/index.html 
 echo 'Main Files pulled; setting service.sh as executable' 
-echo 'Main Files pulled; setting service.sh as executable'
 chmod +x service.sh
 rm images -r 
 mkdir images && cd images
