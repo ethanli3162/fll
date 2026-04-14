@@ -35,7 +35,6 @@ rm -f -- title.png
 rm -f -- tailwind.js 
 rm -f -- stop.png 
 echo 'Downloading HTML5 Assets'
-echo 'Downloading HTML5 Assets' 
 wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/click.mp3 
 wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/button.png 
 wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/GUI.png 
@@ -44,7 +43,6 @@ wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/tail
 wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/stop.png 
 cd
 echo 'Installing requiered python packages'
-echo 'Installing requiered python packages' 
 pip install -r requierments.txt --break-system-packages --disable-pip-version-check 
 echo "Installation complete! You can find the logs at install.log"
 echo "The dashboard is hosted at http://localhost:1234"
