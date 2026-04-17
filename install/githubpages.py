@@ -1,91 +1,67 @@
 from flask import *
-from subprocess import *
 import requests
-from werkzeug.utils import secure_filename
-import os
-import json
-import subprocess
-from pathlib import Path
 
 app = Flask(__name__)
 
-@app.route('/<directory>', methods=['GET', 'POST'])
-def upload(directory):
-    if request.method == 'POST':
-        try:
-            if 'file' not in request.files:
-                return 'No file selected'
-            
-            file = request.files['file']
-            if file.filename == '':
-                return 'No file selected'
-            
-            if file:
-                upload_dir = os.path.join(os.path.dirname(__file__), directory)
-                if not os.path.exists(upload_dir):
-                    os.makedirs(upload_dir)
-
-                filename = secure_filename(file.filename)
-                file_path = os.path.join(upload_dir, filename)
-
-                file.save(file_path)
-
-                return f'File {filename} uploaded successfully!'
-        
-        except Exception as e:
-            return f'An error occurred: {e}'
-    
-    return 'Upload to this API in type: multipart/form-data'
-
-@app.route('/directory/')
-def folderindex(directory):
+@app.route('/<folder1>/')
+def fetchfolderindex(folder1):
 	root = os.path.dirname(__file__)
-	file_path = os.path.join(root, directory, 'index.html')
+	file_path = os.path.join(root, folder1, 'index.html')
 	with open(file_path, 'r', encoding='utf-8') as file:
 		return file.read()
 
-@app.route('/<file>')
-def index(file):
-	if file not in ['favicon.ico']:
-		try:
-			root = os.path.dirname(__file__)
-			file_path = os.path.join(root, file)
-			with open(file_path, 'r', encoding='utf-8') as file:
-				return file.read()
-		except Exception as e:
-			print(f"Error: {e}")
-			return send_from_directory('', file, as_attachment=False)
-	else:
-		return send_from_directory('', file, as_attachment=False)
+@app.route('/<folder1>/<folder2>/')
+def fetchfolderfolderindex(folder1, folder2):
+	root = os.path.dirname(__file__)
+	file_path = os.path.join(root, folder1, folder2, 'index.html')
+	with open(file_path, 'r', encoding='utf-8') as file:
+		return file.read()
+
+@app.route('/<file1>')
+def fetchfile(file1):
+	try:
+		root = os.path.dirname(__file__)
+		file_path = os.path.join(root, file1)
+		with open(file_path, 'r', encoding='utf-8') as file:
+			return file.read()
+	except Exception as e:
+		print(f"Error: {e}")
+		return send_from_directory('', file1, as_attachment=False)
       
-@app.route('/<file1>/<file2>')
-def index2(file1, file2):
+@app.route('/<folder1>/<file1>')
+def fetchfolderfile(folder1, file1):
 	try:
 		root = os.path.dirname(__file__)
-		file_path = os.path.join(root, file1, file2)
+		file_path = os.path.join(root, folder1, file1)
 		with open(file_path, 'r', encoding='utf-8') as file:
 			return file.read()
 	except Exception as e:
 		print(f"Error: {e}")
-		return send_from_directory(file1, file2, as_attachment=False)
+		return send_from_directory(folder1, file1, as_attachment=False)
     
-@app.route('/<file1>/<file2>/<file3>')
-def index3(file1, file2, file3):
+@app.route('/<folder1>/<folder2>/<file1>')
+def fetchfolderfolderfile(folder1, folder2, file1):
 	try:
 		root = os.path.dirname(__file__)
-		file_path = os.path.join(root, file1, file2)
+		file_path = os.path.join(root, folder1, folder2, file1)
 		with open(file_path, 'r', encoding='utf-8') as file:
 			return file.read()
 	except Exception as e:
 		print(f"Error: {e}")
-		return send_from_directory(file1 + '/' + file2, file3, as_attachment=False)
+		return send_from_directory(folder1 + '/' + folder2, file1, as_attachment=False)
       
 @app.route('/')
-def home():
+def fetchindex():
 	root = os.path.dirname(__file__)
 	file_path = os.path.join(root, 'index.html')
 	with open(file_path, 'r', encoding='utf-8') as file:
 		return file.read()
+
+@app.errorhandler(404)
+def page_not_found(e):
+	with open('404.html', 'r') as file:
+		content = file.read()
+	return content
 
 if __name__ == '__main__':
 	app.run(host='0.0.0.0', port=80, debug=False)
