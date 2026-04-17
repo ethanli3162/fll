@@ -1,7 +1,7 @@
 {
-  "short_name": "Dashboard",
-  "name": "Scanner Dashboard",
-  "description": "Scanner Dashboard app for Ancient Vision, a revolutionary modern archeological scanner for sorting and documenting artifacts.",
+  "short_name": "Artifact Alliance",
+  "name": "Artifact Alliance",
+  "description": "The Artifact Alliance webpage - stay tuned for updates about the team!",
   "icons": [
     {
       "src": "/assets/favicon-192x192.png",
