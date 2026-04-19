@@ -13,7 +13,7 @@ rm -f -- gpiolibrary.py
 rm -f -- service.py 
 rm -f -- stop.py 
 rm -f -- service.sh 
-rm -f -- requierments.txt 
+rm -f -- requirements.txt 
 rm -f -- index.html 
 echo 'All old install files removed, pulling new ones'
 wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/vision.py 
@@ -22,7 +22,7 @@ wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/gpio
 wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/service.py 
 wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/stop.py 
 wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/service.sh 
-wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/requierments.txt 
+wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/requirements.txt 
 wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/index.html 
 echo 'Main Files pulled; setting service.sh as executable' 
 chmod +x service.sh
@@ -43,7 +43,7 @@ wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/tail
 wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/stop.png 
 cd
 echo 'Installing requiered python packages'
-pip install -r requierments.txt --break-system-packages --disable-pip-version-check 
+pip install -r requirements.txt --break-system-packages --disable-pip-version-check 
 echo "Installation complete! You can find the logs at install.log"
 echo "The dashboard is hosted at http://localhost:1234"
 echo "Set service.sh to run on startup!"

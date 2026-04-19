@@ -19,7 +19,7 @@ rm -f -- gpiolibrary.py
 rm -f -- service.py 
 rm -f -- stop.py 
 rm -f -- service.sh 
-rm -f -- requierments.txt 
+rm -f -- requirements.txt 
 rm -f -- index.html 
 echo 'All old install files removed, pulling new ones'
 echo 'All old install files removed, pulling new ones' 
@@ -29,7 +29,7 @@ wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/gpio
 wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/service.py 
 wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/stop.py 
 wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/service.sh 
-wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/requierments.txt 
+wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/requirements.txt 
 wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/index.html 
 echo 'Main Files pulled; setting service.sh as executable' 
 echo 'Main Files pulled; setting service.sh as executable'
@@ -53,7 +53,7 @@ wget https://raw.githubusercontent.com/artifact-alliance/fll/master/install/stop
 cd
 echo 'Installing requiered python packages'
 echo 'Installing requiered python packages' 
-pip install -r requierments.txt --break-system-packages --disable-pip-version-check 
+pip install -r requirements.txt --break-system-packages --disable-pip-version-check 
 echo 'Installing linux-wifi-hotspot' 
 rm linux-wifi-hotspot -r 
 echo 'Cloning Repository'
