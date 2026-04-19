@@ -32,6 +32,7 @@ All the professionals we interviewed:
 * Jerry Lin - Comcast
 * Sara Ayers-Rigsby - Florida Public Archaeology Network [FPAN]
 * Amy Covell-Murthy - Carneigie Museam of Natural History [CMNH]
+* Everyone at the SPA conference 4/11/26
 
 To all the open-source software used to make this project possible:
 * Python [https://github.com/python/]
