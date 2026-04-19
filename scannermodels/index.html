@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.2.0/model-viewer.min.js"></script>
-    <title>Logos</title>
+    <title>Scanner Pieces</title>
     <style>
         @font-face {
             font-family: 'Mona Sans';
@@ -182,7 +182,12 @@
         .login-box button:hover {
             filter: brightness(0.95);
         }
-
+        .model {
+            width: 1000px;
+            height: 600px;
+            margin: 20px auto;
+            
+        }
     </style>
 </head>
 <header>
@@ -193,23 +198,47 @@
 </header>
 
 <body>
-    <div class="sub-sub-header p-4 underline">
+    <div class="sub-sub-header p-4 underline hover:scale-105 transition-transform duration-300 hover:bold">
         Scanner Peices:
     </div>
-    <model-viewer class="center" alt="base.glb" src="/scannermodels/base.glb" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
-    <model-viewer class="center" alt="bevelgear.glb" src="/scannermodels/bevelgear.glb" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
-    <model-viewer class="center" alt="bevelholder.glb" src="/scannermodels/bevelholder.glb" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
-    <model-viewer class="center" alt="bridge.glb" src="/scannermodels/bridge.glb" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
-    <model-viewer class="center" alt="camera.glb" src="/scannermodels/camera.glb" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
-    <model-viewer class="center" alt="cameramount.glb" src="/scannermodels/cameramount.glb" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
-    <model-viewer class="center" alt="holderending.glb" src="/scannermodels/holderending.glb" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
-    <model-viewer class="center" alt="holderextention.glb" src="/scannermodels/holderextention.glb" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
-    <model-viewer class="center" alt="holderpiece.glb" src="/scannermodels/holderpiece.glb" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
-    <model-viewer class="center" alt="picase.glb" src="/scannermodels/picase.glb" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
-    <model-viewer class="center" alt="ringgear.glb" src="/scannermodels/ringgear.glb" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
-    <model-viewer class="center" alt="ringholder.glb" src="/scannermodels/ringholder.glb" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
-    <model-viewer class="center" alt="ringpiece.glb" src="/scannermodels/ringpiece.glb" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
-    <model-viewer class="center" alt="stringholder.glb" src="/scannermodels/stringholder.glb" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+    <model-viewer id="red" class="model" alt="base.glb" src="/scannermodels/base.glb" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+    <model-viewer id="grey" class="model" alt="bevelgear.glb" src="/scannermodels/bevelgear.glb" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+    <model-viewer id="red" class="model" alt="bevelholder.glb" src="/scannermodels/bevelholder.glb" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+    <model-viewer id="red" class="model" alt="bridge.glb" src="/scannermodels/bridge.glb" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+    <model-viewer id="red" class="model" alt="camera.glb" src="/scannermodels/camera.glb" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+    <model-viewer id="red" class="model" alt="cameramount.glb" src="/scannermodels/cameramount.glb" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+    <model-viewer id="red" class="model" alt="holderending.glb" src="/scannermodels/holderending.glb" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+    <model-viewer id="red" class="model" alt="holderextention.glb" src="/scannermodels/holderextention.glb" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+    <model-viewer id="red" class="model" alt="holderpiece.glb" src="/scannermodels/holderpiece.glb" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+    <model-viewer id="red" class="model" alt="picase.glb" src="/scannermodels/picase.glb" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+    <model-viewer id="blue" class="model" alt="ringgear.glb" src="/scannermodels/ringgear.glb" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+    <model-viewer id="blue" class="model" alt="ringholder.glb" src="/scannermodels/ringholder.glb" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+    <model-viewer id="blue" class="model" alt="ringpiece.glb" src="/scannermodels/ringpiece.glb" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+    <model-viewer id="red" class="model" alt="stringholder.glb" src="/scannermodels/stringholder.glb" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+
+    <script>
+        const modelViewerRed = document.querySelectorAll("#red");
+        modelViewerRed.forEach(modelViewerColor => {
+            modelViewerColor.addEventListener("load", () => {
+                const [material] = modelViewerColor.model.materials;
+                material.pbrMetallicRoughness.setBaseColorFactor("#e91d2d");
+            });
+        });
+        const modelViewerBlue = document.querySelectorAll("#blue");
+        modelViewerBlue.forEach(modelViewerColor => {
+            modelViewerColor.addEventListener("load", () => {
+                const [material] = modelViewerColor.model.materials;
+                material.pbrMetallicRoughness.setBaseColorFactor("#3b55a3");
+            });
+        });
+        const modelViewerGrey = document.querySelectorAll("#grey");
+        modelViewerGrey.forEach(modelViewerColor => {
+            modelViewerColor.addEventListener("load", () => {
+                const [material] = modelViewerColor.model.materials;
+                material.pbrMetallicRoughness.setBaseColorFactor("#61676a");
+            });
+        });
+    </script>
 </body>
 
 </html>
