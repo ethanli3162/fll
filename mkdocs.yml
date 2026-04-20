@@ -1,5 +1,7 @@
 site_name: Ancient Vision Documentation
 nav:
-  - Home: index.md
+  - About: index.md
+  - License: licence.md
+  - Installation: install.md
   - Credits: credits.md
 theme: readthedocs
