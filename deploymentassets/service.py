@@ -1,3 +1,21 @@
+# /// script
+# requires-python = ">=3.11"
+# dependencies = [
+#     "blinker>=1.9.0",
+#     "certifi>=2026.4.22",
+#     "charset-normalizer>=3.4.7",
+#     "click>=8.3.3",
+#     "colorama>=0.4.6",
+#     "flask>=2.3.3",
+#     "flask-cors>=4.0.0",
+#     "idna>=3.13",
+#     "itsdangerous>=2.2.0",
+#     "jinja2>=3.1.6",
+#     "markupsafe>=3.0.3",
+#     "requests>=2.31.0",
+#     "werkzeug>=2.3.7",
+# ]
+# ///
 from flask import *
 import os, time
 
